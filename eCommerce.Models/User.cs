@@ -11,6 +11,9 @@
         public string? Situation { get; set; }
         public DateTime RegDate { get; set; }
 
+        // Compositions
+        public Contact? Contact { get; set; }
+
         // Constructors
         public User() { }
 
