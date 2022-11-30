@@ -13,6 +13,7 @@
 
         // Compositions
         public Contact? Contact { get; set; }
+        public List<Address>? Addresses { get; set; }
 
         // Constructors
         public User() { }
