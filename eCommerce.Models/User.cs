@@ -13,7 +13,8 @@
 
         // Compositions
         public Contact? Contact { get; set; }
-        public List<Address>? Addresses { get; set; }
+        public ICollection<Address>? Addresses { get; set; }
+        public ICollection<Department>? Departments { get; set; }
 
         // Constructors
         public User() { }
