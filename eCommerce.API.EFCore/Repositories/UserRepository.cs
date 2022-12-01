@@ -1,6 +1,7 @@
 ﻿using eCommerce.Models;
 
 namespace eCommerce.API.EFCore.Repositories {
+    // UserController > IUserRepository (Abstraction) > UserRepository
     public class UserRepository : IUserRepository {
 
         // Fake user list
