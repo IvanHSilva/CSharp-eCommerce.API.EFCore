@@ -34,7 +34,7 @@ namespace eCommerce.API.EFCore.Controllers {
             return Ok(user);
         }
 
-        [HttpPut("{Id}")]
+        [HttpPut("{id}")]
         public IActionResult UpdateUser([FromBody]User user, int id) {
             _repository.UdateUser(user);
             return Ok(user);
