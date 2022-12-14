@@ -1,31 +1,38 @@
-﻿using eCommerce.Models;
+﻿using eCommerce.API.Database;
+using eCommerce.Models;
 
 namespace eCommerce.API.EFCore.Repositories {
     // UserController > IUserRepository (Abstraction) > UserRepository
     public class UserRepository : IUserRepository {
 
-        // Fake user list
-        public static List<User> _db = new List<User>();
+        private readonly eCommerceContext _db;
+
+        public UserRepository(eCommerceContext db) {
+            _db = db;
+        }
 
         public List<User> GetUsers() {
-            return _db;
+            return _db.Users.OrderBy(u => u.Id).ToList();
         }
 
         public User GetUser(int id) {
-            return _db.Find(u => u.Id == id)!;
+            return _db.Users.Find(id)!;
         }
 
         public void InsertUser(User user) {
-            _db.Add(user);
+            // Unit of Works
+            _db.Users.Add(user);
+            _db.SaveChanges();
         }
 
         public void UdateUser(User user) {
-            _db.Remove(GetUser(user.Id));
-            _db.Add(user);
+            _db.Users.Update(user);
+            _db.SaveChanges();
         }
 
         public void DeleteUser(int id) {
-            _db.Remove(GetUser(id));
+            _db.Users.Remove(GetUser(id));
+            _db.SaveChanges();
         }
     }
 }
