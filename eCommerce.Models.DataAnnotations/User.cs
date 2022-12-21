@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eCommerce.Models {
@@ -20,23 +21,32 @@ namespace eCommerce.Models {
     // DataBase-First -> Banco de Dados primeiro, a aplicação é feita de acordo com ele
 
     [Table("Usuarios")]
+    [Index(nameof(EMail), IsUnique = true, Name = "Idx_Unique_EMail")]
     public class User {
         // Attributes
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Key]
         public int Id { get; set; }
         [Column("Nome")]
+        [Required, MaxLength(70)]
         public string Name { get; set; } = string.Empty;
+        [Required, MaxLength(100)]
         public string EMail { get; set; } = string.Empty;
         [Column("Sexo")]
+        [MaxLength(1)]
         public string Gender { get; set; } = string.Empty;
+        [MaxLength(12)]
         public string RG { get; set; } = string.Empty;
+        [MaxLength(14)]
         public string CPF { get; set; } = string.Empty;
-        [Column("Filiacao")] 
+        [Column("Filiacao")]
+        [MaxLength(70)]
         public string Filiation { get; set; } = string.Empty;
         [Column("Situacao")]
+        [MaxLength(1)]
         public string Situation { get; set; } = string.Empty;
         [Column("DataCad")]
+        [Required]
         public DateTime RegDate { get; set; }
 
         // Compositions
