@@ -12,7 +12,7 @@ using eCommerce.API.Database;
 namespace eCommerce.API.EFCore.Migrations
 {
     [DbContext(typeof(eCommerceContext))]
-    [Migration("20221214220047_InitiaDB")]
+    [Migration("20221214235804_InitiaDB")]
     partial class InitiaDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -218,8 +218,7 @@ namespace eCommerce.API.EFCore.Migrations
                 {
                     b.Navigation("Addresses");
 
-                    b.Navigation("Contact")
-                        .IsRequired();
+                    b.Navigation("Contact");
                 });
 #pragma warning restore 612, 618
         }

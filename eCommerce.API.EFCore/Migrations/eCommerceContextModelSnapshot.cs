@@ -216,8 +216,7 @@ namespace eCommerce.API.EFCore.Migrations
                 {
                     b.Navigation("Addresses");
 
-                    b.Navigation("Contact")
-                        .IsRequired();
+                    b.Navigation("Contact");
                 });
 #pragma warning restore 612, 618
         }

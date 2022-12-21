@@ -16,11 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eCommerce.Models\eCommerce.Models.csproj" />
+    <Folder Include="Database\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Database\" />
+    <ProjectReference Include="..\eCommerce.Models.DataAnnotations\eCommerce.Models.DataAnnotations.csproj" />
   </ItemGroup>
 
 </Project>
