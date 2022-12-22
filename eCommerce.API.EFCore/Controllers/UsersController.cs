@@ -1,9 +1,10 @@
 ﻿using eCommerce.API.EFCore.Repositories;
-using eCommerce.Models;
+using eCommerce.Models.FluentAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eCommerce.API.EFCore.Controllers {
+namespace eCommerce.API.EFCore.Controllers
+{
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase {

@@ -1,7 +1,9 @@
+using eCommerce.Models.FluentAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace eCommerce.API.Database {
-    
+namespace eCommerce.API.Database
+{
+
     public class eCommerceContext : DbContext {
 
         // Connection without execution enviroment distinction
