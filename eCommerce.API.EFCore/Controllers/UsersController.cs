@@ -1,5 +1,4 @@
 ﻿using eCommerce.API.EFCore.Repositories;
-using eCommerce.Models.FluentAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

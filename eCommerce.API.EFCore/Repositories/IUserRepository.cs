@@ -1,6 +1,4 @@
-﻿using eCommerce.Models.FluentAPI.Models;
-
-namespace eCommerce.API.EFCore.Repositories
+﻿namespace eCommerce.API.EFCore.Repositories
 {
     public interface IUserRepository {
 

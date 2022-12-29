@@ -1,4 +1,4 @@
-﻿namespace eCommerce.Models.FluentAPI.Models
+﻿namespace eCommerce.Models.FluentAPI
 {
     public class Contact
     {
